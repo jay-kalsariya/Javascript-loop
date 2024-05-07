@@ -1,0 +1,273 @@
+JavaScript if, else, and else if
+
+if Statement
+
+Syntax
+if (condition) {
+  //  block of code to be executed if the condition is true
+}
+
+example
+if (new Date().getHours() < 18) {
+  document.getElementById("demo").innerHTML = "Good day!";
+}
+
+
+{2}else Statement
+
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+
+example
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+
+{3} else if Statement
+
+Syntax
+if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+
+Example
+
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+
+
+
+
+Switch Statement
+
+Syntax
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+Example
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+
+
+{2}
+<script>
+let text;
+switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    text = "Soon it is Weekend";
+    break;
+  case 0:
+  case 6:
+    text = "It is Weekend";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+
+
+
+javascript forloop
+
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+syntex:
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+
+Example:
+let text = "";
+​
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+​
+
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+
+(3) let i = 2;
+let len = cars.length;
+let text = "";
+
+for (; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+
+var i = 5;
+for (var i = 0; i < 10; i++) {
+  // some statements
+}
+
+
+
+(4) For in loop
+Syntax
+for (key in object) {
+  // code block to be executed
+}
+
+Example:
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+
+For In Over Arrays
+
+
+Syntax
+for (variable in array) {
+  code
+}
+
+Example
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x];
+}
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+
+(5)For of Loop
+Syntax
+for (variable of iterable) {
+  // code block to be executed
+}
+
+let text = "";
+for (let x of cars) {
+  text += x;
+}
+
+
+The While Loop:
+Syntax
+while (condition) {
+  // code block to be executed
+}
+
+
+Example
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+
+
+The Do While Loop
+
+Syntax
+do {
+  // code block to be executed
+}
+while (condition);
+Example
+do {
+  text += "The number is " + i;
+  i++;
+}
+while (i < 10);
+
+
+
+
+let i = 0;
+let text = "";
+for (;cars[i];) {
+  text += cars[i] + "<br>";
+  i++;
+}
+​
+let i = 0;
+let text = "";
+while (cars[i]) {
+  text += cars[i] + "<br>";
+  i++;
+}
+​
+
+JavaScript Break and Continue
+Example
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { break; }
+  text += "The number is " + i + "<br>";
+}
+
+The Continue Statement
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "The number is " + i + "<br>";
+}
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let text = "";
+​
+list: {
+  text += cars[0] + "<br>"; 
+  text += cars[1] + "<br>"; 
+  break list;
+  text += cars[2] + "<br>"; 
+  text += cars[3] + "<br>"; 
+}
+​
+document.getElementById("demo").innerHTML = text;
+</script>
+​
